@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Tetris</title>
   <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="scores.css" />
 </head>
 <body>
   <div class="wrapper">
@@ -39,6 +40,11 @@
           <canvas id="next-canvas" width="120" height="120"></canvas>
         </div>
 
+        <div class="panel-section">
+          <span class="label">RECORDS</span>
+          <div id="side-records" class="records-container"></div>
+        </div>
+
         <div class="panel-section controls">
           <span class="label">CONTROLS</span>
           <ul>
@@ -56,11 +62,38 @@
       <div class="overlay-box">
         <p id="overlay-title">GAME OVER</p>
         <p id="overlay-score"></p>
+        <div id="score-entry" class="score-entry hidden"></div>
+        <div id="overlay-records" class="records-container"></div>
         <button id="restart-btn">Reiniciar</button>
+      </div>
+    </div>
+
+    <div id="start-screen" class="overlay">
+      <div class="overlay-box start-box">
+        <h2 class="start-title">TETRIS</h2>
+        <div id="start-records" class="records-container"></div>
+        <div class="start-stats">
+          <div class="panel-section">
+            <span class="label">MEJOR COMBO</span>
+            <span class="value" id="start-best-combo">0</span>
+          </div>
+          <div class="panel-section">
+            <span class="label">MÁS LÍNEAS</span>
+            <span class="value" id="start-max-lines">0</span>
+          </div>
+        </div>
+        <button id="play-btn">JUGAR</button>
+        <button id="reset-scores-btn" class="reset-btn">Reset records</button>
+        <div id="reset-confirm" class="reset-confirm hidden">
+          <span>¿Seguro?</span>
+          <button id="reset-yes-btn">Sí</button>
+          <button id="reset-no-btn">No</button>
+        </div>
       </div>
     </div>
   </div>
 
   <script src="game.js"></script>
+  <script src="scores.js"></script>
 </body>
 </html>
