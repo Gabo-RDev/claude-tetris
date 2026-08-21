@@ -1,0 +1,50 @@
+/* ---- Menú de pausa ---- */
+#pause-title {
+  font-size: 28px;
+  font-weight: 800;
+  letter-spacing: 4px;
+  color: var(--overlay-title);
+}
+
+#pause-menu select {
+  background: var(--panel-bg);
+  color: var(--text);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: 4px 8px;
+  font-size: 14px;
+  font-family: inherit;
+}
+
+.pause-menu-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  align-items: stretch;
+  width: 180px;
+}
+
+.pause-menu-actions button {
+  background: var(--accent);
+  color: var(--accent-contrast);
+  border: none;
+  border-radius: 6px;
+  padding: 10px 20px;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  letter-spacing: 1px;
+  transition: opacity 0.15s;
+}
+
+.pause-menu-actions button:hover {
+  opacity: 0.85;
+}
+
+#pause-controls {
+  align-items: center;
+}
+
+#pause-controls.hidden {
+  display: none;
+}
